@@ -1,0 +1,20 @@
+{
+  "name": "ms-joseg",
+  "version": "1.0.0",
+  "description": "Microservice with nodejs and docker",
+  "main": "app.js",
+  "scripts": {
+    "start": "wait-for-it.sh mysql-db:3306 -- node app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "docker"
+  ],
+  "author": "Jose_Gutierrez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+      "mysql2": "^2.3.0"   
+  }
+}

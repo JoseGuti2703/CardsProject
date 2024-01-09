@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=j0s34ndr3s
+      - MYSQL_DATABASE=db_cards
+    ports:
+      -3306:3306
+
+  node_app:
+    build: .
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    ports:
+      - 3000:8000
